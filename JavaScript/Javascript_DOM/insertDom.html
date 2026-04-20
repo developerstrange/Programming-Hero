@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing elements</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Access html elements</h2>
+    <main>
+      <section>
+        <article id="first-article">
+          <h3>Article-1</h3>
+          <p class="author">Author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            earum modi veritatis dolorem veniam facilis, doloribus atque,
+            aspernatur in ratione illo nemo reprehenderit laborum omnis,
+            inventore odit deserunt corporis natus!
+          </p>
+        </article>
+        <article class="special">
+          <h3>Article-2</h3>
+          <p class="author">Author-2</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            laboriosam dignissimos rerum amet earum vitae impedit, saepe
+            inventore quisquam eligendi exercitationem reiciendis nemo magnam
+            illo doloribus, dolore repellendus eaque quis?
+          </p>
+        </article>
+        <article class="special">
+          <h3>Article-3</h3>
+          <p class="author">Author-3</p>
+          <p class="description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatibus possimus explicabo iusto incidunt voluptatem, unde
+            alias nam officia cupiditate itaque aperiam quis animi qui officiis
+            molestias magnam quibusdam. Fuga, odit.
+          </p>
+        </article>
+        <article>
+          <ul id="grocery">
+            <li>gift-1</li>
+            <li>gift-2</li>
+            <li>gift-3</li>
+            <li>gift-4</li>
+            <li>gift-5</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      var article = document.getElementById("first-article");
+
+      var newPara = document.createElement("p");
+      newPara.innerHTML = "This is new paragraph.";
+
+      article.appendChild(newPara);
+
+      var grocery = document.getElementById("grocery");
+
+      var newItem = document.createElement("li");
+      newItem.innerHTML = "Perfume";
+
+      grocery.appendChild(newItem);
+    </script>
+  </body>
+</html>

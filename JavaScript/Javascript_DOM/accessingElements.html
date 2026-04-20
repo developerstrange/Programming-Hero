@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing elements</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Access html elements</h2>
+    <main>
+      <section>
+        <article class="special">
+          <h3>Article-1</h3>
+          <p class="author">Author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            earum modi veritatis dolorem veniam facilis, doloribus atque,
+            aspernatur in ratione illo nemo reprehenderit laborum omnis,
+            inventore odit deserunt corporis natus!
+          </p>
+        </article>
+        <article>
+          <h3>Article-2</h3>
+          <p class="author">Author-2</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            laboriosam dignissimos rerum amet earum vitae impedit, saepe
+            inventore quisquam eligendi exercitationem reiciendis nemo magnam
+            illo doloribus, dolore repellendus eaque quis?
+          </p>
+        </article>
+        <article class="special">
+          <h3>Article-3</h3>
+          <p class="author">Author-3</p>
+          <p class="description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Voluptatibus possimus explicabo iusto incidunt voluptatem, unde
+            alias nam officia cupiditate itaque aperiam quis animi qui officiis
+            molestias magnam quibusdam. Fuga, odit.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      /*
+      var authors = document.getElementsByClassName("author");
+      for (var i = 0; i < authors.length; i++) {
+        var element = authors[i];
+        element.style.backgroundColor = "Orange";
+        element.style.margin = "auto";
+        element.style.padding = "10px";
+        element.style.width = "40%";
+        element.innerHTML = "Writer - " + (i + 1);
+        console.log(element.innerHTML);
+      }
+      */
+
+      // querySelector --> provides a single element like getElementById, which can i directly style
+      // querySelectorAll --> provides multiple element like getElementByTagName, which we can style using loops
+
+      var authors = document.querySelectorAll(".special h3");
+      for (var i = 0; i < authors.length; i++) {
+        var element = authors[i];
+        element.style.backgroundColor = "Orange";
+        element.style.margin = "auto";
+        element.style.padding = "10px";
+        element.style.width = "40%";
+        // element.innerHTML = "Writer - " + (i + 1);
+        // console.log(element.innerHTML);
+        element.setAttribute("title", "These article are same.");
+      }
+    </script>
+  </body>
+</html>

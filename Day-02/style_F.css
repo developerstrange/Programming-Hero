@@ -1,0 +1,261 @@
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#screen1 {
+  display: block;
+  z-index: 50;
+  background-color: black;
+}
+
+#screen2 {
+  background-color: rgb(223, 79, 79);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+#screen3 {
+  background-color: rgb(255, 160, 200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.welcome-text {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 80%;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.tap-button {
+  padding: 18px;
+  border-radius: 12px;
+  background-color: #ff4f92;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 15px rgba(216, 100, 71, 0.918);
+  transition: 0.3s;
+  animation-name: heartbeat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.tap-button:hover {
+  background-color: #e43d27;
+  color: rgb(250, 245, 244);
+}
+
+#screen4 {
+  background-color: rgb(255, 160, 200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.image-container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 120, 160, 0.6);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.image-container img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 100, 150, 0.6);
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+#screen5 {
+  background-color: rgb(255, 160, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.text {
+  font-size: 24px;
+  line-height: 1.6;
+  max-width: 600px;
+  color: white;
+  opacity: 0;
+  text-align: center;
+  white-space: pre-line;
+  /* ← RESTORED FIX */
+  overflow-wrap: normal;
+  /* ← PREVENTS WORD BREAKING */
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes glowIn {
+  0% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.intro-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  position: fixed;
+  text-align: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  animation: introPage 2s ease-in-out 0s 1 normal forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-me {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 100px);
+  align-items: center;
+  gap: 10px;
+}
+
+.choose-me img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#me {
+  width: 50px;
+  height: 45px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@keyframes introPage {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.heart-animation {
+  animation-name: heartbeat;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+.heart-emoji {
+  font-size: 200px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.25);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* fallback shake animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-8px);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
+
+  75% {
+    transform: translateX(-8px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

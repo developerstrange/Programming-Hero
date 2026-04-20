@@ -1,0 +1,351 @@
+<!--
+There are some markup in html:
+1. the tag will be started using <> 
+2. the tag will be ended with same name but using a '/' in <> before the name
+
+
+#To write a paragraph:
+<p> </p>
+
+
+#To make something bold or highlighted:
+<b> </b> or <strong> </strong>
+Difference between bold and strong:
+Bold () is for visual style (making text thicker), 
+while strong () is for semantic meaning (indicating strong importance or urgency), 
+though both usually appear bold; strong tells screen readers to emphasize pronunciation, 
+whereas bold does not, making strong better for accessibility and SEO,
+while bold is for purely presentational needs like labels or titles. 
+
+
+#To make some text or header big or small font:
+<h1> </h1>   ===>The biggest font size 
+<h2> </h2>
+<h3> </h3>
+<h4> </h4>
+<h5> </h5>
+<h6> </h6>  ====>The smallest font size
+
+
+#To add any link:
+<a href="reference link"> </a>
+
+#To add images:
+<img src="source">
+
+
+#There are two types of list container in html:
+1. Ordered list
+=> <ol>
+     <li>item name</li>
+   </ol>
+
+2. Unordered list
+=> <ul>
+     <li>item name</li>
+   </ul>
+
+
+#To add a title in my website:
+<title> title name </title>
+
+
+-------------------------------------------------------
+
+
+🔷 Types of HTML Tags
+1️⃣ Paired (Container) Tags
+
+These tags have opening and closing tags.
+
+📌 Structure:
+
+<tagname> content </tagname>
+
+Examples:
+<p>This is a paragraph</p>
+<h1>Heading</h1>
+<div>Box</div>
+<span>Inline text</span>
+
+2️⃣ Unpaired (Empty / Self-Closing) Tags
+
+These tags do not have closing tags.
+
+Examples:
+<br>
+<hr>
+<img>
+<input>
+<meta>
+<link>
+
+3️⃣ Block-Level Tags
+
+They start on a new line and take full width.
+
+Common block tags:
+<div>
+<p>
+<h1> to <h6>
+<section>
+<article>
+<header>
+<footer>
+
+4️⃣ Inline Tags
+
+They do not start on a new line and take only needed width.
+
+Common inline tags:
+<span>
+<a>
+<img>
+<strong>
+<em>
+label
+
+5️⃣ Semantic Tags (HTML5)
+
+These tags have meaning (SEO + readability).
+
+Examples:
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+
+6️⃣ Non-Semantic Tags
+
+These tags have no meaning, only for layout.
+
+Examples:
+<div>
+<span>
+
+7️⃣ Formatting Tags
+
+Used for text styling.
+
+Examples:
+<b>Bold</b>
+<strong>Important</strong>
+<i>Italic</i>
+<em>Emphasis</em>
+<u>Underline</u>
+<mark>Highlight</mark>
+
+8️⃣ List Tags
+
+Used to create lists.
+
+Examples:
+<ul>  <== unordered ==>
+<ol>  <== ordered ==>
+<li>  <== list item ==>
+
+9️⃣ Table Tags
+
+Used for tables.
+
+Examples:
+<table>
+<tr>
+<th>
+<td>
+<thead>
+<tbody>
+<tfoot>
+
+🔷 Types of HTML Attributes
+
+📌 Attributes give extra information about tags.
+
+Structure:
+<tag attribute="value">
+
+1️⃣ Global Attributes
+
+Can be used with any HTML tag.
+
+Attribute	Description
+id	Unique identifier
+class	Group styling
+style	Inline CSS
+title	Tooltip
+hidden	Hide element
+Example:
+<p id="para1" class="text" title="Hello">Text</p>
+
+2️⃣ Core Attributes
+
+Basic and commonly used.
+
+Attribute	Example
+id	id="box"
+class	class="container"
+style	style="color:red"
+3️⃣ Event Attributes
+
+Used for JavaScript events.
+
+Examples:
+<button onclick="alert('Hi')">Click</button>
+<input onfocus="test()">
+
+4️⃣ Boolean Attributes
+
+They don’t need value.
+
+Examples:
+<input disabled>
+<input checked>
+<input readonly>
+<input required>
+
+5️⃣ Specific Attributes (Tag-Dependent)
+<img> attributes:
+<img src="photo.jpg" alt="My Photo" width="200">
+
+<a> attributes:
+<a href="https://google.com" target="_blank">Google</a>
+
+<input> attributes:
+<input type="text" placeholder="Enter name" name="username">
+
+6️⃣ Data Attributes (Custom)
+
+Used to store custom data.
+
+Example:
+<div data-user-id="101"></div>
+
+
+Access in JS:
+
+element.dataset.userId
+
+
+
+--------------------------------------------------------
+
+📦 Container Tags in HTML (Paired Tags)
+
+Container tags are HTML tags that have both an opening tag and a closing tag and can contain text or other HTML elements inside them.
+
+🔹 Structure
+<tagname> content </tagname>
+
+🔹 Common Container Tags
+1️⃣ Text & Heading Container Tags
+<h1>Heading</h1>
+<h2>Sub Heading</h2>
+<p>This is a paragraph</p>
+<span>Inline text</span>
+
+2️⃣ Layout / Section Container Tags
+<div>Content box</div>
+<section>Section content</section>
+<article>Article content</article>
+<header>Header area</header>
+<footer>Footer area</footer>
+<nav>Navigation menu</nav>
+<main>Main content</main>
+
+3️⃣ List Container Tags
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+</ol>
+
+4️⃣ Table Container Tags
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Ali</td>
+    <td>20</td>
+  </tr>
+</table>
+
+5️⃣ Form Container Tags
+<form>
+  <label>Name:</label>
+  <input type="text">
+  <button>Submit</button>
+</form>
+
+6️⃣ Formatting Container Tags
+<b>Bold</b>
+<strong>Important</strong>
+<i>Italic</i>
+<em>Emphasis</em>
+<u>Underline</u>
+<mark>Highlight</mark>
+
+
+-->
+
+<p>
+  The territory of modern <a href="https://www.bangladesh.com/">Bangladesh</a> was a stronghold of many Hindu and Buddhist dynasties in ancient history. Following
+  the <strong>Muslim conquest in 1204,</strong> the region saw Sultanate and Mughal rule. As the largest subdivision of the Mughal
+  Empire, the region of Bengal emerged one of the most prosperous and commercially active areas of the world, known for
+  its thriving textile industry and agricultural productivity. <b>The Battle of Plassey</b> in 1757 marked the beginning of
+  British colonial rule for the following two centuries. In the aftermath of the Partition of India in 1947, East Bengal
+  became the eastern and most populous wing of the newly formed Dominion of Pakistan and was later renamed to East
+  Pakistan.
+</p>
+
+
+<img src="https://cdn.shortpixel.ai/spai/q_lossy+w_350+h_233+to_auto+ret_img/www.bangladesh.com/wp-content/uploads/2020/02/Canva-Tetulia-Jame-Mosque.jpg"></img>
+<img src="images/Canva-Dhaka-Bangladesh.avif">
+
+
+
+<ol>
+  <h4>Daily routine:</h4>
+  <li>Breakfast</li>
+  <li>Bath</li>
+  <li>Walking</li>
+  <li>Playing games</li>
+</ol>
+
+
+<ul>
+  <h4>Weekly routine:</h4>
+  <li>Web development</li>
+  <li>Backend development</li>
+  <li>AI/ML learn</li>
+  <li>Playing games</li>
+</ul>
+
+<!-- Structure of a HTML website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<!-- Jei tag gula dekhlei bujha jay oi tag er meaning ta ki, oigulai semantic tag -->
+
+<br><br><br>
+
+
+
+

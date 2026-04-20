@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Learning in JS</title>
+  </head>
+  <body>
+    <!-- <h1 onmouseenter="eventHandlersecond()">Exploring Events</h1>
+    <button onclick="evenHandler()">Click me - 0</button> -->
+    <h1>Exploring Events</h1>
+    <button>Click me - 0</button>
+    <button id="second">Click me - 1</button>
+    <button>Click me - 2</button>
+    <button id="third">Click me - 3</button>
+
+    <script>
+      function evenHandler() {
+        alert("Someone clicked me!");
+      }
+      function eventHandlersecond() {
+        console.log("Someone over me.");
+      }
+      function handleClick() {
+        document.body.style.backgroundColor = "tomato";
+      }
+
+      var secondBtn = document.getElementById("second");
+      secondBtn.addEventListener("click", handleClick);
+      // secondBtn.onclick = evenHandler;
+
+      document.getElementById("third").addEventListener("click", function () {
+        document.body.style.color = "red";
+      });
+    </script>
+  </body>
+</html>

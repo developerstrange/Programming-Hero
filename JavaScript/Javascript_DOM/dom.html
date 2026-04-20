@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore DOM</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Exploring DOM</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+          dicta autem accusamus quam rerum?
+        </p>
+        <p id="dom">
+          DOM - Document Object Model HTML files are parsed by browser as a
+          document and create an object model of this document for javascript.
+          We later use that object to modify anything in that object document or
+          add any extra feature.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      var first = document.getElementById("dom");
+      first.style.color = "White";
+      first.style.backgroundColor = "Brown";
+      first.style.width = "70%";
+      first.style.textAlign = "center";
+      first.style.margin = "auto";
+
+      // var tagFirst = document.getElementsByTagName("h2");
+      // tagFirst.style.backgroundColor = "Yellow";
+      // tagFirst.style.margin = "auto";
+    </script>
+  </body>
+</html>

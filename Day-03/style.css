@@ -1,0 +1,50 @@
+
+input:focus{
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
+}
+
+li:nth-child(2n){
+  background-color: indianred;
+}
+
+a:visited{
+  color: green;
+}
+
+
+
+/* Pseudo element*/
+
+h1::before{
+  content: "Hello ";
+  font-size: 20px;
+  background-color: indianred;
+}
+
+.header::after{
+  content: ", Bye";
+  font-size: 20px;
+  background-color: aquamarine;
+}
+
+body{
+  counter-reset: section;
+}
+
+p::before{
+  counter-increment: section;
+  content: "Kamla " counter(section) ": ";
+}
+
+h2{
+  color: cyan;
+}
+
+.name{
+  color: goldenrod !important;
+}
+
+
+
