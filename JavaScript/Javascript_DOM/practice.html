@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Calculate Cost</title>
+  </head>
+  <body>
+    <h1>Product Name: Wireless Mouse</h1>
+    <h2>Price: $25</h2>
+
+    Quantity:
+    <input type="number" id="qty" /><br /><br />
+
+    Final Cost:
+    <input type="text" id="cost" readonly /><br /><br />
+
+    <button onclick="calculateCost()">Calculate Cost</button>
+    <button>Submit Order</button>
+
+    <script>
+      function calculateCost() {
+        let quantity = document.getElementById("qty").value;
+        let total = quantity * 25;
+        document.getElementById("cost").value = total;
+      }
+
+      // let id = document.getElementsByTagName(h1);
+      // console.log(id);
+    </script>
+  </body>
+</html>
