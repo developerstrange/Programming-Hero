@@ -60,12 +60,14 @@
     </main>
 
     <script>
-      var article = document.getElementById("first-article");
+      var article = document.getElementsByTagName("article");
 
-      var newPara = document.createElement("p");
-      newPara.innerHTML = "This is new paragraph.";
+      for (let i = 0; i < article.length; i++) {
+        var newPara = document.createElement("p");
+        newPara.innerHTML = "This is new paragraph.";
 
-      article.appendChild(newPara);
+        article[i].appendChild(newPara);
+      }
 
       var grocery = document.getElementById("grocery");
 
